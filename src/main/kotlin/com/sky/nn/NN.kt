@@ -17,7 +17,6 @@ fun sigmoid(totalStrength: Double): Double {
 }
 
 fun main() {
-
     val startSignals = getStartSignal()
 
     val neuronsL1 = getNeurons(startSignals)
@@ -31,7 +30,6 @@ fun main() {
 
     val neuronsL4 = getNeurons(neuronsL1.map { Signal(it.activation) })
     calculateActivations(neuronsL4)
-
 }
 
 private fun getStartSignal(): List<Signal> {
