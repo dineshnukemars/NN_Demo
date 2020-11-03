@@ -7,13 +7,11 @@ private fun getRandWeight(): Double = (Math.random() * 0.1)
 private fun getRandBias(): Double = (Math.random() * 0.9)
 
 data class Signal(val activation: Double, var weight: Double = getRandWeight())
-
 data class Neuron(val inputSignals: List<Signal>, val bias: Double = getRandBias(), var activation: Double = 0.0)
 
 data class Layer(val neurons: List<Neuron>)
 
 fun sigmoid(totalStrength: Double): Double {
-
     val denominator = 1 + Math.E.pow(-1.0 * totalStrength)
     return 1 / denominator
 }
